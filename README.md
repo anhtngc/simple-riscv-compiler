@@ -9,7 +9,7 @@ This project is a lightweight, educational RISC-V compiler that translates RISC-
 - **Flexible Register Naming**: Allows use of conventional RISC-V register names (e.g., a0, t1) for user-friendly assembly code.
 
 ## 3️⃣ Getting Started:
-Before using the my Siny RISC-V Compiler, ensure you have the following installed: `python 3.x`
+Before using the my Simple RISC-V Compiler, ensure you have the following installed: `python 3.x`
 ### Installation
 Clone the repository:
 ```bash
