@@ -18,14 +18,14 @@ cd simple-riscv-compiler
 ```
 ### Usage
 #### 1. Edit your RISC-V Assembly codes:
-Modify the content of the `input.asm` file with your RISC-V Assembly instructions.
+Modify the content of the `code.asm` file with your RISC-V Assembly instructions.
 #### 2. Compile the file containing RISC-V Assembly codes:
 Run the following command to compile your assembly code:
 ```bash
-    python3 main.py
+    python3 assembler.py
 ```
 #### 3. Result:
-The compiled binary machine codes output will be generated and saved (created) in the `output.txt` file (this file is stored in the same directory with `main.py`)
+The compiled binary machine codes output will be generated and saved (created) in the `binary.bin` file (this file is stored in the same directory with `assembler.py`)
 
 ### 4️⃣ Supported Instructions:
 The Simple RISC-V Compiler supports the full suite of standard RISC-V instructions, including:
