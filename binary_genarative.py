@@ -174,7 +174,13 @@ class IType_2:
         return format(int(reg[1:]), '05b')
 
     def imm_to_bin(self, imm):
-        return format(int(imm), '012b')
+        # Convert immediate to 12-bit signed binary in two's complement
+        imm_int = int(imm)
+        if imm_int < 0:
+            imm_bin = format((1 << 12) + imm_int, '012b')  # Two's complement for negative numbers
+        else:
+            imm_bin = format(imm_int, '012b')
+        return imm_bin
 
     def to_machine_code(self):
         rd_bin = self.reg_to_bin(self.rd)
@@ -260,7 +266,14 @@ class SType:
         return format(int(reg[1:]), '05b')
 
     def imm_to_bin(self, imm):
-        imm_bin = format(int(imm), '012b')
+        # Convert immediate to 12-bit signed binary in two's complement
+        imm_int = int(imm)
+        if imm_int < 0:
+            imm_bin = format((1 << 12) + imm_int, '012b')  # Two's complement for negative numbers
+        else:
+            imm_bin = format(imm_int, '012b')
+
+        # Split into imm[11:5] and imm[4:0] for S-type format
         return imm_bin[:7], imm_bin[7:]
 
     def to_machine_code(self):
